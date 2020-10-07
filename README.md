@@ -114,7 +114,7 @@ gomux.GetFn("/example", Example),
 and creating a function with the original signature of 
 
 ```go
-func Example(w http.ResponseWriter, r http.Request) {
+func Example(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(202)
 	w.Write([]byte("Successful Call!"))
 }
